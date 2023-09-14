@@ -1,0 +1,113 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: greet_back
+  - action: utter_greet_back
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: greet_back
+  - action: utter_greet_back
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  - intent: greet_back
+  - action: utter_greet_back
+
+- story: General Immigration Path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_general_immigration
+  - action: utter_general_immigration
+
+- story: general immigration path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_general_immigration
+  - action: utter_general_immigration
+  - intent: general_immigration_query
+  - action: action_provide_immigration_info
+  # - action: utter_immigration_info
+
+- story: student immigration path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: student_immigration_query
+  - action: action_provide_immigration_info
+  # - action: utter_immigration_info
+
+- story: Express Entry Path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_express_entry
+  - action: utter_express_entry
+
+- story: Family Sponsorship Path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_family_sponsorship
+  - action: utter_family_sponsorship
+
+- story: Provincial Nominee Path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_provincial_nominee
+  - action: utter_provincial_nominee
+
+- story: Atlantic Program Path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_atlantic_program
+  - action: utter_atlantic_program
+
+- story: Temp to Perm Path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_temp_to_perm
+  - action: utter_temp_to_perm
+
+- story: Student Path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_student_path
+  - action: utter_student_path
+
+- story: Goodbye Path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+
+
+
