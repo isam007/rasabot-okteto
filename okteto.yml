@@ -1,0 +1,13 @@
+name: OmdenaBot
+image: rasa/rasa:latest-full
+command: rasa run -m models --enable-api --cors “*” --debug -p 5006
+volumes: 
+  - /root/.cache/pip
+sync:
+  - .:/app
+forward:
+  - 8080:8080
+  - 5006:5006
+  - 5055:5055
+reverse:
+  - 9000:9000

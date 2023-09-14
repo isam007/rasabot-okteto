@@ -1,0 +1,86 @@
+version: "3.1"
+
+intents:
+  - greet
+  - greet_back
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_general_immigration
+  - general_immigration_query 
+  - student_immigration_query
+  - ask_express_entry
+  - ask_family_sponsorship
+  - ask_provincial_nominee
+  - ask_atlantic_program
+  - ask_temp_to_perm
+  - ask_student_path
+ 
+
+entities:
+  - immigration_type
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_greet_back:
+  - text: "I'm good. Thank you! How can I help you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://imgur.com/gallery/MxOp8Jl"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_thanks:
+  - text: "You are welcome! Can I help you with anything else?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_general_immigration:
+  - text: "There are several ways to immigrate to Canada, including through the Express Entry system for skilled workers, Family Sponsorship, Provincial Nominee Programs, the Atlantic Immigration Program, and as a student. Would you like to know more about any of these options?"
+
+
+  utter_immigration_info:
+  - text: "To immigrate to Canada, you usually need to go through a multi-step process. For more information, visit [Canada Immigration](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada.html)."
+  - text: "If you are a student, you might require a Study Permit. For more details, you can check [Student Immigration Page](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html)."
+
+
+  utter_express_entry:
+  - text: "Express Entry is a system for skilled workers to immigrate to Canada. It provides a faster way for eligible candidates to settle in the country. [Learn more](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html)"
+
+  utter_family_sponsorship:
+  - text: "Family sponsorship allows you to sponsor your relatives, including your spouse, partner, children, parents, and grandparents, to immigrate to Canada. [Learn more](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/family-sponsorship.html)"
+
+  utter_provincial_nominee:
+  - text: "The Provincial Nominee Program allows provinces to nominate individuals who wish to immigrate to Canada and are interested in settling in a particular province. [Learn more](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees.html)"
+
+  utter_atlantic_program:
+  - text: "The Atlantic Immigration Program allows you to immigrate by graduating from a school or working in New Brunswick, Prince Edward Island, Nova Scotia, or Newfoundland and Labrador. [Learn more](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/atlantic-immigration.html)"
+
+  utter_temp_to_perm:
+  - text: "The temporary resident to permanent resident pathway is a limited-time pathway to permanent residence for certain temporary residents who are currently working in Canada and their families. [Learn more](https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/temporary-resident-permanent-pathway.html)"
+
+  utter_student_path:
+  - text: "To study in Canada, you'll generally need a study permit or a student visa. Requirements may include proof of funds, a letter of acceptance from a Canadian institution, and other documentation. [Learn more](https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada.html)"
+
+actions:
+  - action_provide_immigration_info
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

@@ -1,0 +1,188 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: greet_back
+  examples: |
+    - How are you?
+    - I'm good. you?
+    - good. you?
+    - not bad. yourself?
+    
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    
+- intent: thanks
+  examples: |
+    - ok thanks
+    - thank you
+    - awesome thanks
+    - many thanks
+    - thanks so much
+    - thanks a lot
+    - thanks
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: price
+  examples: |
+    - How much is the price?
+    - how much does it cost?
+    - how much is for size?
+    - what is the price for this size?
+
+- intent: ask_general_immigration
+  examples: |
+    - How can I immigrate to Canada?
+    - What are the ways to move to Canada?
+    - Tell me about immigrating to Canada
+    - Tell me about immigrating to Canada.
+    - How can I immigrate to Canada?
+    - What do I need to move to Canada?
+    - How can I move to Canada to live?
+    - I want to immigrate to Canada.
+    - How can you help me immigrate to Canada?
+    - Can you help me immigrate to Canada?
+
+
+- intent: general_immigration_query
+  examples: |
+    - Tell me about immigrating to Canada.
+    - How can I immigrate to Canada?
+    - What do I need to move to Canada?
+    - How can a I move to Canada to live?
+    - I want to immigrate to Canada.
+    - How can you help me immigrate to Canada?
+    - Can you help me immigrate to Canada?
+
+
+- intent: student_immigration_query
+  examples: |
+    - How can a student move to Canada?
+    - What are the requirements for student immigration?
+    - I am a student.
+    - I want to immigrate to Canada.
+    - How can you help me immigrate to Canada?
+    - Can you help me immigrate to Canada?
+
+
+- intent: ask_express_entry
+  examples: |
+    - Tell me about Express Entry
+    - What is Express Entry?
+- intent: ask_family_sponsorship
+  examples: |
+    - How does family sponsorship work?
+    - Can I sponsor my family?
+- intent: ask_provincial_nominee
+  examples: |
+    - What is the Provincial Nominee Program?
+    - How do provincial nominations work?
+- intent: ask_atlantic_program
+  examples: |
+    - Tell me about the Atlantic Immigration Program
+    - How does the Atlantic Program work?
+- intent: ask_temp_to_perm
+  examples: |
+    - What is the temporary resident to permanent resident pathway?
+    - How can a temporary resident become a permanent resident?
+- intent: ask_student_path
+  examples: |
+    - Tell me about student visas
+    - How can I study in Canada?
+    - What are the requirements for a student visa?
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+
+
+
+
+
+
