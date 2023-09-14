@@ -1,3 +1,6 @@
+RASABOT Installation
+--------------------
+
 1. Create a SmartBot Folder (this will be our root directory) and open it in VS Code
 2. Make sure you have Python 3.10 installed: python --version. Higher versions are not compatible with Rasa yet.
 3. If you have Python 3.10, then move on, otherwise install it from https://www.python.org/downloads/release/python-3100/ 
@@ -35,8 +38,11 @@ OKTETO Deployment
 7. Re-deploy: okteto deploy --build 
 8. That's it! if you go to your okteto repository, you should see 3 services running: frontend, actions & rasa
 
-Important: 1. Make sure to train your model before pushing your app to okteto. Since model file is too big, I deleted it from this repo to save space.
-           2. All enpoints in this project currently point to my okteto repo. Make sure to re-direct them to yours or to local host.
-           3. If you follow all the steps in this Read Me file, you'll have all end points directing to localhost. You'll need to redirect them to URL's that okteto gives you.
+IMPORTANT!!!
+-------------
+
+1. Make sure to train your model before pushing your app to okteto. Since model file is too big, I deleted it from this repo to save space.
+2. All enpoints in this project currently point to my okteto repo. Make sure to re-direct them to yours or to local host.
+3. If you follow all the steps in this Read Me file, you'll have all end points directing to localhost. You'll need to redirect them to URL's that okteto gives you.
            
 
