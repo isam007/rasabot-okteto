@@ -41,7 +41,7 @@ OKTETO Deployment
 IMPORTANT!!!
 -------------
 
-1. Make sure to train your model before pushing your app to okteto. Since model file is too big, I deleted it from this repo to save space.
+1. Make sure to train your model before pushing your app to okteto or add the command to okteto.yml to train your model in okteto environment, which will take longer.
 2. All enpoints in this project currently point to my okteto repo. Make sure to re-direct them to yours or to local host.
 3. If you follow all the steps in this Read Me file, you'll have all end points directing to localhost. You'll need to redirect them to URL's that okteto gives you.
            
