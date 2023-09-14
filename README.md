@@ -22,3 +22,21 @@ python -m venv ./rasa
 -- Note! If you also use actions and modified actions.py file, you should then first run actions from a new terminal in the VS Code: rasa run actions  and then rasa run --enable-api --cors "*" in another terminal. Both servers should be running at the same time if you use actions.
 14. Now just go to your browser where index.html file opened and test a chatbot.
 15. Now you are ready to train your model. Note, every time you add new questions and responses to yml files in your data folder, you should run rasa train to train new model. And you should see new model appear in the models folder.
+
+OKTETO Deployment
+-----------------
+
+1. Sign up for account at https://cloud.okteto.com/
+2. Login with your github account
+3. Folow the documentationt to setup a namespace for your project
+4. Copy okteto.yml and docker-compose.yml files from this repo to your project's root deirectory (where domain.yml file is located)
+5. To deploy run: okteto deploy --build 
+6. Change all endpoints to point to urls that okteto gives you for each service.
+7. Re-deploy: okteto deploy --build 
+8. That's it! if you go to your okteto repository, you should see 3 services running: frontend, actions & rasa
+
+Important: 1. Make sure to train your model before pushing your app to okteto. Since model file is too big, I deleted it from this repo to save space.
+           2. All enpoints in this project currently point to my okteto repo. Make sure to re-direct them to yours or to local host.
+           3. If you follow all the steps in this Read Me file, you'll have all end points directing to localhost. You'll need to redirect them to URL's that okteto gives you.
+           
+
