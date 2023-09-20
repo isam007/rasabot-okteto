@@ -10,6 +10,7 @@ services:
       - ./models:/app/models
       - ./actions:/app/actions
       - ./tests:/app/tests
+      - ./:/app
     command:
       - run
       - -m
@@ -23,18 +24,14 @@ services:
     networks:
       - all
 
+
   action-server:
-    image: rasa/rasa:latest-full
+    image: rasa/rasa-sdk:latest
     ports:
       - "5055:5055"
+    restart: always
     volumes:
       - ./actions:/app/actions
-    command:
-      - run
-      - actions
-      - --cors
-      - "*"
-      - --debug
 
     working_dir: /app
     networks:
@@ -47,9 +44,9 @@ services:
     restart: always
     ports:
       - "8080:80"
-    #command: ["nginx", "-g", "daemon off;"]
     networks:
       - all
-
-
-     
+    
+networks:
+  all:
+    driver: bridge
