@@ -24,7 +24,6 @@ services:
     networks:
       - all
 
-
   action-server:
     image: rasa/rasa-sdk:latest
     ports:
@@ -32,7 +31,6 @@ services:
     restart: always
     volumes:
       - ./actions:/app/actions
-
     working_dir: /app
     networks:
       - all
