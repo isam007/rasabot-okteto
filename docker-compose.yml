@@ -24,7 +24,7 @@ services:
       - all
 
   action-server:
-    image: rasa/rasa-sdk:latest
+    image: rasa/rasa:latest-full
     ports:
       - "5055:5055"
     volumes:
