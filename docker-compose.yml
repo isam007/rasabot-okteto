@@ -4,6 +4,7 @@ services:
     image: rasa/rasa:latest-full
     ports:
       - "5006:5006"
+    restart: always
     volumes:
       - ./data:/app/data
       - ./models:/app/models
@@ -22,16 +23,18 @@ services:
     networks:
       - all
 
-
-
-
   action-server:
     image: rasa/rasa-sdk:latest
     ports:
       - "5055:5055"
     volumes:
       - ./actions:/app/actions
-    command: ["start", "--debug"]
+    command:
+      - run
+      - actions
+      - --cors
+      - "*"
+      - --debug
 
     working_dir: /app
     networks:
@@ -41,15 +44,12 @@ services:
     image: nginx:latest
     volumes:
       - ./chatbot:/usr/share/nginx/html
+    restart: always
     ports:
       - "8080:80"
     #command: ["nginx", "-g", "daemon off;"]
     networks:
       - all
 
-networks:
-  all:
-    driver: bridge
-    driver-opts:
-      com.docker.network.enable.ipv6: "true"
+
      
